@@ -2,7 +2,7 @@
     <ul>
       <li *ngFor="let task of tasks">
         <input [(ngModel)]="task.title" placeholder="title"><button (click)=updateTask(task)>Update</button><br>
-        <input [(ngModel)]="task.description" placeholder="description"><button (click)=deleteTask(task.id!)>Delete</button><br>
+        <textarea [(ngModel)]="task.description" placeholder="description"></textarea><button (click)=deleteTask(task.id!)>Delete</button><br>
       </li>
     </ul>
 </div>
