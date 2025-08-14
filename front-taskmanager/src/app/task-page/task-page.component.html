@@ -5,7 +5,28 @@
         <input [(ngModel)]="task.description" placeholder="description"><button (click)=deleteTask(task.id!)>Delete</button><br>
       </li>
     </ul>
-  </div>
+</div>
+
+<div>
+    You can add a Task Here !
+    <form (ngSubmit)="addTask()" #taskForm="ngForm">
+        <input
+          type="text"
+          name="title"
+          [(ngModel)]="newTask.title"
+          placeholder="Titre"
+          required
+        />
+        <input
+          type="text"
+          name="description"
+          [(ngModel)]="newTask.description"
+          placeholder="Description"
+          required
+        />
+        <button type="submit" [disabled]="taskForm.invalid">Ajouter</button>
+      </form>
+</div>
   
   <ng-template #noTasks>
     <p>Aucune tâche trouvée.</p>

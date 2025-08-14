@@ -10,6 +10,7 @@ import { Task } from '../common/task';
 export class TaskPageComponent implements OnInit {
 
   tasks: Task[] = [];
+  newTask: Task = new Task('', '');
 
   constructor(private taskService: TaskService) { }
 
@@ -17,31 +18,38 @@ export class TaskPageComponent implements OnInit {
     this.getTasks();
   }
 
-  getTasks(): void{
+  getTasks(): void {
     this.taskService.getTasks().subscribe(
-      (data: Task[]) =>{
+      (data: Task[]) => {
         this.tasks = data;
       },
-      (error) =>{
+      (error) => {
         console.log('Error when retrieving tasks:', error);
       }
     );
   }
 
-  deleteTask(taskId: number){
+  deleteTask(taskId: number) {
     this.taskService.deleteTask(taskId).subscribe({
       next: () => console.log("supprimé"),
       error: (err) => console.log(err)
     });
   }
 
-  updateTask(task: Task){
+  updateTask(task: Task) {
     this.taskService.updateTask(task).subscribe({
       next: (updatedTask) => {
         console.log('Task Updated: ', updatedTask);
       },
       error: (err) => console.error(err)
     })
+  }
+
+  addTask(): void {
+    this.taskService.createTask(this.newTask).subscribe((createdTask) => {
+      this.tasks.push(createdTask);
+      this.newTask = new Task('', ''); 
+    });
   }
 
 }
