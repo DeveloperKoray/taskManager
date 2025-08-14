@@ -31,7 +31,7 @@ export class TaskPageComponent implements OnInit {
 
   deleteTask(taskId: number) {
     this.taskService.deleteTask(taskId).subscribe({
-      next: () => console.log("supprimé"),
+      next: () => this.getTasks(),
       error: (err) => console.log(err)
     });
   }
@@ -39,7 +39,7 @@ export class TaskPageComponent implements OnInit {
   updateTask(task: Task) {
     this.taskService.updateTask(task).subscribe({
       next: (updatedTask) => {
-        console.log('Task Updated: ', updatedTask);
+        this.getTasks();
       },
       error: (err) => console.error(err)
     })
@@ -49,6 +49,7 @@ export class TaskPageComponent implements OnInit {
     this.taskService.createTask(this.newTask).subscribe((createdTask) => {
       this.tasks.push(createdTask);
       this.newTask = new Task('', ''); 
+      this.getTasks();
     });
   }
 
