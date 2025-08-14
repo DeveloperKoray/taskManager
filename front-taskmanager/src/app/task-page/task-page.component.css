@@ -1,0 +1,37 @@
+button {
+    display: inline-block;  /* permet au bouton de s’adapter au contenu */
+    padding: 6px 12px;      /* espace intérieur */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    white-space: nowrap;    /* empêche le texte de revenir à la ligne */
+  }
+  
+  
+  button:hover {
+    background-color: #e0e0e0; /* léger changement au survol */
+  }
+  
+  button:active {
+    background-color: #d0d0d0; /* au clic */
+  }
+
+  input[type="button"], input[type="submit"] {
+    display: inline-block;  /* s'adapte au contenu */
+    width: auto;            /* largeur automatique */
+    padding: 6px 12px;      /* espace intérieur */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    white-space: nowrap;    /* empêche le retour à la ligne */
+    box-sizing: content-box;
+  }
+  
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
+    background-color: #e0e0e0;
+  }

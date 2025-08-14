@@ -1,0 +1,20 @@
+header {
+    background: #f0f0f0;
+    /* Gris clair */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    /* Ligne de séparation */
+}
+
+footer {
+    background: #f0f0f0;
+    /* Gris clair */
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    /* Ligne de séparation */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
