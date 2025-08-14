@@ -20,8 +20,8 @@ div {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
-  /* Inputs */
-  li input[type="text"] {
+  /* Textareas */
+  li textarea {
     width: calc(70% - 16px); /* laisse un espace pour le bouton */
     padding: 6px 8px;
     margin-bottom: 8px;
@@ -29,7 +29,8 @@ div {
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
-    display: inline-block;
+    resize: vertical; /* l’utilisateur peut ajuster la hauteur */
+    vertical-align: top;
   }
   
   /* Boutons */
