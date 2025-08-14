@@ -1,0 +1,58 @@
+### Backend (Java/Spring) ###
+# Fichiers de compilation
+/target/
+/bin/
+/build/
+*.jar
+*.war
+*.ear
+*.class
+
+# Fichiers IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.vscode/
+
+# Fichiers de logs
+*.log
+logs/
+
+# Fichiers de configuration sensible
+application*.properties
+application*.yml
+/config/credentials/**
+
+# Dossiers temporaires
+tmp/
+
+
+### Frontend (Angular) ###
+# Dependencies
+/node_modules/
+
+# Fichiers de compilation
+/dist/
+/.angular/cache
+
+# Environnements
+/.env
+.env.local
+.env.*.local
+
+# Fichiers IDE
+.angular/
+.history/
+
+
+### Commun ###
+# Système
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
