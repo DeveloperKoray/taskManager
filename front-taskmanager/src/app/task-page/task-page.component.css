@@ -35,3 +35,7 @@ button {
   input[type="submit"]:hover {
     background-color: #e0e0e0;
   }
+
+  li {
+    padding: 1rem;
+  }
